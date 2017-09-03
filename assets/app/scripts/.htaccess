@@ -1,0 +1,25 @@
+# For this to work, make sure following modules are enabled
+#
+# LoadModule proxy_module libexec/apache2/mod_proxy.so
+# LoadModule proxy_http_module libexec/apache2/mod_proxy_http.so
+# LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+
+RewriteEngine on
+# Proxy media to the server
+RewriteRule ^media/(.+?)$  <%= this.server %>/media/$1 [QSA,P,L]
+
+# Proxy endpoints to the server
+RewriteRule ^umbraco/(.+?)$  <%= this.server %>/umbraco/$1 [QSA,P,L]
+
+##################################
+##		Uncomment for SPA		##
+##################################
+
+# # Load markupfiles (used in SPA)
+# RewriteRule ^markup/(.+?)$  markup/$1 [QSA,L]
+
+# RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+# RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+# RewriteRule ^ - [L]
+
+# RewriteRule ^ /index.html

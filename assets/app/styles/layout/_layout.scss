@@ -1,0 +1,24 @@
+.color-yellow {
+	color: $color-yellow;
+}
+
+.crimson {
+	font-family: 'crimson-textbold-italic';
+	font-size: 115%;
+}
+
+@keyframes pulse {
+	from {
+		transform: scale(0.5);
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

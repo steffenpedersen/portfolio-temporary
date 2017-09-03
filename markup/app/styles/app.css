@@ -1,0 +1,347 @@
+/**
+ * CSS easings below
+ *
+ * See listed eases and make your own here:
+ * http://matthewlein.com/ceaser/
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'poppinsbold';
+  src: url(/app/styles/fonts/poppins-bold-webfont.eot);
+  src: url(/app/styles/fonts/poppins-bold-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/poppins-bold-webfont.woff2) format("woff2"), url(/app/styles/fonts/poppins-bold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'poppinslight';
+  src: url(/app/styles/fonts/poppins-light-webfont.eot);
+  src: url(/app/styles/fonts/poppins-light-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/poppins-light-webfont.woff2) format("woff2"), url(/app/styles/fonts/poppins-light-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'poppinsmedium';
+  src: url(/app/styles/fonts/poppins-medium-webfont.eot);
+  src: url(/app/styles/fonts/poppins-medium-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/poppins-medium-webfont.woff2) format("woff2"), url(/app/styles/fonts/poppins-medium-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'poppinsregular';
+  src: url(/app/styles/fonts/poppins-regular-webfont.eot);
+  src: url(/app/styles/fonts/poppins-regular-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/poppins-regular-webfont.woff2) format("woff2"), url(/app/styles/fonts/poppins-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'poppinssemibold';
+  src: url(/app/styles/fonts/poppins-semibold-webfont.eot);
+  src: url(/app/styles/fonts/poppins-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/poppins-semibold-webfont.woff2) format("woff2"), url(/app/styles/fonts/poppins-semibold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url(/app/styles/fonts/fontawesome-webfont.eot);
+  src: url(/app/styles/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/fontawesome-webfont.woff2) format("woff2"), url(/app/styles/fonts/fontawesome-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'crimson-textbold-italic';
+  src: url(/app/styles/fonts/crimsontext-bolditalic-webfont.eot);
+  src: url(/app/styles/fonts/crimsontext-bolditalic-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/crimsontext-bolditalic-webfont.woff2) format("woff2"), url(/app/styles/fonts/crimsontext-bolditalic-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'crimson-textitalic';
+  src: url(/app/styles/fonts/crimsontext-italic-webfont.eot);
+  src: url(/app/styles/fonts/crimsontext-italic-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/crimsontext-italic-webfont.woff2) format("woff2"), url(/app/styles/fonts/crimsontext-italic-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'crimson-textsemibold-italic';
+  src: url(/app/styles/fonts/crimsontext-semibolditalic-webfont.eot);
+  src: url(/app/styles/fonts/crimsontext-semibolditalic-webfont.eot?#iefix) format("embedded-opentype"), url(/app/styles/fonts/crimsontext-semibolditalic-webfont.woff2) format("woff2"), url(/app/styles/fonts/crimsontext-semibolditalic-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #262626;
+  background-color: #FFFFFF;
+  font-family: 'poppinsbold', sans-serif;
+  line-height: 1.6;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+h2 {
+  font-family: 'poppinsbold', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: #262626;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  opacity: 0; }
+
+p {
+  font-family: 'poppinsregular', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #262626;
+  opacity: .8;
+  letter-spacing: 1px;
+  opacity: 0; }
+
+a {
+  color: #262626;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer; }
+
+h2 a::after {
+  content: '';
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  z-index: 1;
+  width: 0;
+  background-color: #FACA33; }
+
+h2 a:hover::after {
+  width: 100%; }
+
+::selection {
+  color: #262626;
+  background: #FACA33; }
+
+::-moz-selection {
+  color: #262626;
+  background: #FACA33; }
+
+sup {
+  vertical-align: super;
+  font-size: 13px;
+  color: #D7D0C8; }
+
+ul,
+ol,
+table,
+p {
+  margin-bottom: 20px; }
+
+ul,
+ol {
+  list-style: none; }
+
+ul ul {
+  margin-bottom: 0; }
+
+.color-yellow {
+  color: #FACA33; }
+
+.crimson {
+  font-family: 'crimson-textbold-italic';
+  font-size: 115%; }
+
+@keyframes pulse {
+  from {
+    transform: scale(0.5);
+    opacity: 1; }
+  50% {
+    opacity: 0.5; }
+  to {
+    transform: scale(1);
+    opacity: 0; } }
+
+main {
+  margin: 100px 10vw; }
+  @media all and (max-width: 768px) {
+    main {
+      margin: 50px 10vw; } }
+  @media all and (max-width: 400px) {
+    main {
+      margin: 50px 5vw; } }
+  main #hello {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    @media all and (max-width: 768px) {
+      main #hello {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+    main #hello h1 {
+      margin-left: 60px; }
+
+.left-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10vw;
+  height: 100vh;
+  z-index: 90;
+  background-color: #FFFFFF;
+  transition: all 300ms;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .left-bar:hover {
+    width: 11vw; }
+  @media all and (max-width: 400px) {
+    .left-bar {
+      display: none; } }
+  .left-bar .top {
+    height: calc(100vh / 3);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+    .left-bar .top .image {
+      height: 70px;
+      min-height: 70px;
+      width: 70px;
+      min-width: 70px;
+      margin-top: 30px;
+      border-radius: 50%;
+      background-image: url(/app/static/me.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0; }
+  .left-bar .middle {
+    height: calc(100vh / 3);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .left-bar .middle a {
+      font-family: 'poppinsbold', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+  .left-bar .bottom {
+    height: calc(100vh / 3);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+    .left-bar .bottom .arrow {
+      position: relative;
+      font-family: 'poppinsbold', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      padding-left: 25px;
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+      .left-bar .bottom .arrow span::before {
+        content: '\F175';
+        font-family: fontawesome;
+        position: absolute;
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        animation: ani-arrow 2s ease-in-out infinite; }
+
+@keyframes ani-arrow {
+  from {
+    left: 0; }
+  25% {
+    left: 10px; }
+  50% {
+    left: 0; }
+  to {
+    left: 0; } }
+
+.right-bar {
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  right: 0;
+  top: 0;
+  width: 10vw;
+  height: 100vh;
+  z-index: 90;
+  background-color: #FFFFFF;
+  transition: all 300ms;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .right-bar:hover {
+    width: 11vw; }
+  @media all and (max-width: 400px) {
+    .right-bar {
+      display: none; } }
+  .right-bar ul {
+    text-align: center; }
+    .right-bar ul li {
+      margin-top: 12px; }
+      .right-bar ul li a {
+        font-family: fontawesome;
+        font-size: 16px;
+        color: #262626; }
+        .right-bar ul li a.linkedin::before {
+          content: '\F0E1'; }
+        .right-bar ul li a.instagram::before {
+          content: '\F16D'; }
+        .right-bar ul li a.codepen::before {
+          content: '\F1CB'; }
+
+/*# sourceMappingURL=app.css.map*/
