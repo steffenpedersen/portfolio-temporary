@@ -1,0 +1,26 @@
+#projects {
+	p {
+		opacity: 1;
+	}
+
+	h2 {
+		opacity: 1;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.list-enter-active,
+.list-leave-active {
+	transition: opacity 0.3s, transform 0.3s;
+	transform-origin: left center;
+}
+
+.list-enter,
+.list-leave-to {
+	opacity: 0;
+	transform: scale(0.5);
+}

@@ -1,0 +1,25 @@
+<div id="projects">
+	<label for="inputActor">Web:
+		<input type="radio" v-model="checked" value="web" for="web">
+	</label>
+	<label for="inputDevelopment">Design:
+		<input type="radio" v-model="checked" value="design" for="design">
+	</label>
+	<h2>{{ checked }}</h2>
+	<div v-for="project in projectsFilter" v-bind:key="project">
+		<a href="#web-1">{{ project.name }}</a>
+	</div>
+	<transition-group name="list">
+		<div v-for="project in projectsFilter" v-bind:key="project">
+			<div :id="project.id">
+				<p>{{ project.name }}</p>
+				<p>{{ project.company }}</p>
+				<p>{{ project.year }}</p>
+				<p>{{ project.tech }}</p>
+				<p>{{ project.link }}</p>
+				<p>{{ project.desc }}</p>
+				<img :src="project.img" alt="">
+			</div>
+		</div>
+	</transition-group>
+</div>

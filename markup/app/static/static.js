@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 30);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -97,7 +97,9 @@ var map = {
 	"./icons/ms-icon-150x150.png": 24,
 	"./icons/ms-icon-310x310.png": 25,
 	"./icons/ms-icon-70x70.png": 26,
-	"./me.jpg": 27
+	"./me.jpg": 27,
+	"./sfi.png": 28,
+	"./vuc-roskilde.png": 29
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -280,6 +282,18 @@ module.exports = __webpack_require__.p + "/static/me.jpg";
 
 /***/ }),
 /* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/sfi.png";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/vuc-roskilde.png";
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);

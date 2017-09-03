@@ -106,8 +106,19 @@ body {
   font-family: 'poppinsbold', sans-serif;
   line-height: 1.6;
   height: 100%;
-  min-height: 100%;
-  overflow: hidden; }
+  min-height: 100%; }
+
+h1 {
+  font-family: 'poppinsbold', sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: 1px; }
+  @media all and (max-width: 1024px) {
+    h1 {
+      font-size: 75px; } }
+  @media all and (max-width: 920px) {
+    h1 {
+      font-size: 62px; } }
 
 h2 {
   font-family: 'poppinsbold', sans-serif;
@@ -117,6 +128,13 @@ h2 {
   letter-spacing: 1px;
   line-height: 1.6;
   opacity: 0; }
+
+h3 {
+  font-family: 'poppinsbold', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px; }
 
 p {
   font-family: 'poppinsregular', sans-serif;
@@ -343,5 +361,28 @@ main {
           content: '\F16D'; }
         .right-bar ul li a.codepen::before {
           content: '\F1CB'; }
+
+#projects p {
+  opacity: 1;
+}
+#projects h2 {
+  opacity: 1;
+}
+#projects img {
+  width: 100%;
+  height: auto;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+  -ms-transform-origin: left center;
+      transform-origin: left center;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  -ms-transform: scale(0.5);
+      transform: scale(0.5);
+}
 
 /*# sourceMappingURL=app.css.map*/

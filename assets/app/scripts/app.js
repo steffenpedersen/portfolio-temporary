@@ -4,8 +4,7 @@ import store from 'store';
 import 'fade';
 import 'fade-down';
 import 'fade-in';
-import 'menu-open';
-import 'menu-close';
+import 'projects';
 
 new Vue({
 	el: '[app]',
