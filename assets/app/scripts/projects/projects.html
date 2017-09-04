@@ -1,25 +1,59 @@
-<div id="projects">
-	<label for="inputActor">Web:
-		<input type="radio" v-model="checked" value="web" for="web">
-	</label>
-	<label for="inputDevelopment">Design:
-		<input type="radio" v-model="checked" value="design" for="design">
-	</label>
-	<h2>{{ checked }}</h2>
-	<div v-for="project in projectsFilter" v-bind:key="project">
-		<a href="#web-1">{{ project.name }}</a>
-	</div>
-	<transition-group name="list">
-		<div v-for="project in projectsFilter" v-bind:key="project">
-			<div :id="project.id">
-				<p>{{ project.name }}</p>
-				<p>{{ project.company }}</p>
-				<p>{{ project.year }}</p>
-				<p>{{ project.tech }}</p>
-				<p>{{ project.link }}</p>
-				<p>{{ project.desc }}</p>
-				<img :src="project.img" alt="">
+<section id="project-content">
+	<div id="overview">
+		<div class="grid">
+			<div class="col-1-2">
+				<h3><span class="crimson">a selection of</span><br>projects<span class="color-yellow">.</span></h3>
+			</div>
+			<div class="col-1-2 right">
+				<input type="radio" v-model="checked" value="web" for="web" id="radioWeb" />
+				<label for="radioWeb">
+					<span>Web</span>
+				</label>
+				<input type="radio" v-model="checked" value="design" for="design" id="radioDesign" />
+				<label for="radioDesign">
+					<span>Design</span>Radio Button 2
+				</label>
 			</div>
 		</div>
-	</transition-group>
-</div>
+		<div>
+			<ul>
+				<li v-for="project in projectsFilter" v-bind:key="project">
+					<a :href="project.href">{{ project.name }}. <span class="crimson">{{ project.company }}</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<h5>{{ checked }}</h5>
+	<div id="projects">
+		<transition-group name="list">
+				<div class="project" :id="project.id" v-for="project in projectsFilter" v-bind:key="project">
+					<h4>{{ project.name }}</h4>
+					<div class="grid">
+						<div class="col-1-2">
+							<div class="subject">
+								<h5>Company</h5>
+								<p>{{ project.company }}</p>
+							</div>
+							<div class="subject">
+								<h5>Year</h5>
+								<p>{{ project.year }}</p>
+							</div>
+							<div class="subject">
+								<h5>My used technologies</h5>
+								<p>{{ project.tech }}</p>
+							</div>
+							<div class="subject">
+								<h5>Link</h5>
+								<a :href="project.http">{{ project.link }}</a>
+							</div>
+						</div>
+						<div class="col-1-2">
+							<p class="desc">{{ project.desc }}</p>
+						</div>
+					</div>
+					<img :src="project.img1" alt="">
+					<img :src="project.img2" alt="">
+				</div>
+		</transition-group>
+	</div>
+</section>

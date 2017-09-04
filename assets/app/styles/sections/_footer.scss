@@ -1,0 +1,39 @@
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 10vw;
+	padding: 35px;
+	@include lt(10) {
+		margin: 50px 10vw;
+	}
+	@include lt(5) {
+		margin: 50px 5vw;
+	}
+
+	p {
+		text-align: center;
+		font-size: 11px;
+		opacity: 1;
+		margin-bottom: 10px;
+	}
+
+	ul {
+		display: flex;
+		margin-bottom: 0;
+		li {
+			margin: 5px;
+			font-size: 11px;
+			letter-spacing: 1px;
+		}
+	}
+
+	a {
+		font-family: 'poppinsbold', sans-serif;
+		font-weight: 700;
+		&:hover {
+			@include hover(3px, "yellow");
+		}
+	}
+}

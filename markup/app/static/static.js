@@ -71,7 +71,12 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./cursor-metal.png": 2,
+	"./broed-intro.png": 31,
+	"./broed-start2.png": 35,
+	"./dlrt-blog.png": 36,
+	"./flowmaster.png": 32,
+	"./happy_sportswearint.jpg": 37,
+	"./hbp-posters.png": 38,
 	"./icons/android-icon-144x144.png": 3,
 	"./icons/android-icon-192x192.png": 4,
 	"./icons/android-icon-36x36.png": 5,
@@ -98,8 +103,10 @@ var map = {
 	"./icons/ms-icon-310x310.png": 25,
 	"./icons/ms-icon-70x70.png": 26,
 	"./me.jpg": 27,
+	"./sfi-sektion.png": 33,
 	"./sfi.png": 28,
-	"./vuc-roskilde.png": 29
+	"./vuc-roskilde.png": 29,
+	"./vucvest-sektion.png": 34
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -125,12 +132,7 @@ webpackContext.id = 0;
 module.exports = __webpack_require__.p + "static/icons/favicon.ico";
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "/static/cursor-metal.png";
-
-/***/ }),
+/* 2 */,
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -297,6 +299,54 @@ module.exports = __webpack_require__.p + "/static/vuc-roskilde.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/broed-intro.png";
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/flowmaster.png";
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/sfi-sektion.png";
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/vucvest-sektion.png";
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/broed-start2.png";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/dlrt-blog.png";
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/happy_sportswearint.jpg";
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/static/hbp-posters.png";
 
 /***/ })
 /******/ ]);

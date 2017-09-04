@@ -10148,23 +10148,68 @@ var state = {
 	projects: [{
 		type: 'web',
 		id: 'web-1',
-		img: '/app/static/vuc-roskilde.png',
+		href: '#web-1',
+		img1: '/app/static/vuc-roskilde.png',
+		img2: '/app/static/vucvest-sektion.png',
 		name: 'VUC Fællesskaberne',
 		company: 'Skybrud.dk',
 		year: '2017',
 		tech: 'HTML, SCSS, AngularJS, Browsersupport',
 		link: 'www.vucvest.dk',
+		http: 'http://www.vucvest.dk',
 		desc: 'VUC Fællesskaberne er en løsning ved Skybrud.dk. Det er en større løsning, som omfatter 10 hjemmesider med mulighed for tilvalg af layout og design. Jeg udførte en gennemgang af koden til frontend. Dette indebar at jeg omskrev HTML, SCSS og AngularJS hvor det var nødvendigt. Jeg udførte også browsersupport.'
 	}, {
 		type: 'web',
 		id: 'web-2',
-		img: '/app/static/sfi.png',
+		href: '#web-2',
+		img1: '/app/static/sfi.png',
+		img2: '/app/static/sfi-sektion.png',
 		name: 'SFI- Det Nationale Forskningscenter for Velfærd',
 		company: 'Skybrud.dk',
 		year: '2017',
 		tech: 'HTML, SCSS, AngularJS, Browsersupport',
 		link: 'www.sfi.dk',
+		http: 'http://www.sfi.dk',
 		desc: 'SFI er en også en hjemmeside, hvor jeg udførte en gennemgang af koden til frontend. Her tilpassede og forbedrede jeg HTML, SCSS og components ved AngularJS. Jeg udførte også browsersupport.'
+	}, {
+		type: 'web',
+		id: 'web-3',
+		href: '#web-3',
+		img1: '/app/static/broed-start2.png',
+		img2: '/app/static/broed-intro.png',
+		name: 'Brød & Co.',
+		company: 'Skybrud.dk',
+		year: '2017',
+		tech: 'HTML, SCSS, JavaScript, ES6, Vue.js, TweenLite, webpack, Browsersupport',
+		link: 'www.steffenp.dk/broed',
+		http: 'http://www.steffenp.dk/broed',
+		desc: 'Jeg har udviklet en prototype af en hjemmeside til Brød & Co. Her opsatte jeg al kode til frontend. Jeg brugte Yarn til dependencies og Webpack til den generelle opbygning. Jeg brugte naturligvis HTML, SCSS og JavaScript. Her valgte jeg Vue.js til framework med components og directives. Jeg brugte den nyeste version af JavaScript, hvormed Babel blev brugt af komprimering til ES5. TweenLite blev brugt til animation. Jeg udførte også browsersupport.'
+	}, {
+		type: 'web',
+		id: 'web-4',
+		href: '#web-4',
+		img1: '/app/static/flowmaster.png',
+		img2: '/app/static/dlrt-blog.png',
+		name: 'Flowmaster, WP',
+		company: 'DLRT',
+		year: '2015-',
+		tech: 'HTML, SCSS, JavaScript, jQuery, WordPress',
+		link: 'www.flowmaster.dk',
+		http: 'http://www.flowmaster.dk',
+		desc: 'DLRT er en mindre virksomhed, som jeg har oprettet med en anden webudvikler. Vi startede den i forbindelse med praktik i egen virksomhed ved multimediedesigneruddannelsen. Vi har her lavet en hjemmeside for en anden virksomhed og eksperimenteret med WordPress ved egne plugins og themes. Vi har ikke brugt virksomheden aktivt i en længere periode grundet videre uddannelse, men har holdt den åben for support.'
+	}, {
+		type: 'design',
+		id: 'design-1',
+		href: '#design-1',
+		img1: '/app/static/hbp-posters.png',
+		img2: '/app/static/happy_sportswearint.jpg',
+		name: 'Etsy',
+		company: 'Happy Bear Prints',
+		year: '2014-2017',
+		tech: 'Adobe Illustrator, Adobe Photoshop, kundekontakt',
+		link: 'www.happybearprints.etsy.com',
+		http: 'http://www.happybearprints.etsy.com',
+		desc: ''
 	}]
 };
 
@@ -11390,15 +11435,19 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('section', {
     attrs: {
-      "id": "projects"
+      "id": "project-content"
     }
-  }, [_c('label', {
+  }, [_c('div', {
     attrs: {
-      "for": "inputActor"
+      "id": "overview"
     }
-  }, [_vm._v("Web:\n\t\t"), _c('input', {
+  }, [_c('div', {
+    staticClass: "grid"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "col-1-2 right"
+  }, [_c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -11408,7 +11457,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "radio",
       "value": "web",
-      "for": "web"
+      "for": "web",
+      "id": "radioWeb"
     },
     domProps: {
       "checked": _vm._q(_vm.checked, "web")
@@ -11418,11 +11468,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.checked = "web"
       }
     }
-  })]), _vm._v(" "), _c('label', {
-    attrs: {
-      "for": "inputDevelopment"
-    }
-  }, [_vm._v("Design:\n\t\t"), _c('input', {
+  }), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -11432,7 +11478,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "radio",
       "value": "design",
-      "for": "design"
+      "for": "design",
+      "id": "radioDesign"
     },
     domProps: {
       "checked": _vm._q(_vm.checked, "design")
@@ -11442,33 +11489,84 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.checked = "design"
       }
     }
-  })]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.checked))]), _vm._v(" "), _vm._l((_vm.projectsFilter), function(project) {
-    return _c('div', {
+  }), _vm._v(" "), _vm._m(2)])]), _vm._v(" "), _c('div', [_c('ul', _vm._l((_vm.projectsFilter), function(project) {
+    return _c('li', {
       key: project
     }, [_c('a', {
       attrs: {
-        "href": "#web-1"
+        "href": project.href
       }
-    }, [_vm._v(_vm._s(project.name))])])
-  }), _vm._v(" "), _c('transition-group', {
+    }, [_vm._v(_vm._s(project.name) + ". "), _c('span', {
+      staticClass: "crimson"
+    }, [_vm._v(_vm._s(project.company))])])])
+  }))])]), _vm._v(" "), _c('h5', [_vm._v(_vm._s(_vm.checked))]), _vm._v(" "), _c('div', {
+    attrs: {
+      "id": "projects"
+    }
+  }, [_c('transition-group', {
     attrs: {
       "name": "list"
     }
   }, _vm._l((_vm.projectsFilter), function(project) {
     return _c('div', {
-      key: project
-    }, [_c('div', {
+      key: project,
+      staticClass: "project",
       attrs: {
         "id": project.id
       }
-    }, [_c('p', [_vm._v(_vm._s(project.name))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.company))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.year))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.tech))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.link))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.desc))]), _vm._v(" "), _c('img', {
+    }, [_c('h4', [_vm._v(_vm._s(project.name))]), _vm._v(" "), _c('div', {
+      staticClass: "grid"
+    }, [_c('div', {
+      staticClass: "col-1-2"
+    }, [_c('div', {
+      staticClass: "subject"
+    }, [_c('h5', [_vm._v("Company")]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.company))])]), _vm._v(" "), _c('div', {
+      staticClass: "subject"
+    }, [_c('h5', [_vm._v("Year")]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.year))])]), _vm._v(" "), _c('div', {
+      staticClass: "subject"
+    }, [_c('h5', [_vm._v("My used technologies")]), _vm._v(" "), _c('p', [_vm._v(_vm._s(project.tech))])]), _vm._v(" "), _c('div', {
+      staticClass: "subject"
+    }, [_c('h5', [_vm._v("Link")]), _vm._v(" "), _c('a', {
       attrs: {
-        "src": project.img,
+        "href": project.http
+      }
+    }, [_vm._v(_vm._s(project.link))])])]), _vm._v(" "), _c('div', {
+      staticClass: "col-1-2"
+    }, [_c('p', {
+      staticClass: "desc"
+    }, [_vm._v(_vm._s(project.desc))])])]), _vm._v(" "), _c('img', {
+      attrs: {
+        "src": project.img1,
         "alt": ""
       }
-    })])])
-  }))], 2)
-},staticRenderFns: []}
+    }), _vm._v(" "), _c('img', {
+      attrs: {
+        "src": project.img2,
+        "alt": ""
+      }
+    })])
+  }))], 1)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-1-2"
+  }, [_c('h3', [_c('span', {
+    staticClass: "crimson"
+  }, [_vm._v("a selection of")]), _c('br'), _vm._v("projects"), _c('span', {
+    staticClass: "color-yellow"
+  }, [_vm._v(".")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('label', {
+    attrs: {
+      "for": "radioWeb"
+    }
+  }, [_c('span', [_vm._v("Web")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('label', {
+    attrs: {
+      "for": "radioDesign"
+    }
+  }, [_c('span', [_vm._v("Design")]), _vm._v("Radio Button 2\n\t\t\t\t")])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

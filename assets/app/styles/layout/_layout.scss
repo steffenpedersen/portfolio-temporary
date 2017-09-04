@@ -7,6 +7,24 @@
 	font-size: 115%;
 }
 
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	&.right {
+		// right: 0;
+	}
+
+	.col-1-2 {
+		flex: 1;
+		max-width: 50%;
+		@media (max-width: 720px) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}
+
 @keyframes pulse {
 	from {
 		transform: scale(0.5);
