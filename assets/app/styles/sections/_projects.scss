@@ -39,7 +39,7 @@
 		}
 
 		input[type="radio"]:checked + label span {
-			background-color: $color-greybrown;
+			opacity: .3;
 		}
 
 		input[type="radio"] + label span,

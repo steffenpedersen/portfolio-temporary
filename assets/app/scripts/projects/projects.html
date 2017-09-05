@@ -18,7 +18,7 @@
 		<div>
 			<ul>
 				<li v-for="project in projectsFilter" v-bind:key="project">
-					<a :href="project.href">{{ project.name }}. <span class="crimson">{{ project.company }}</span></a>
+					<scroll-items :target-id="project.id">{{ project.name }}. <span class="crimson">{{ project.company }}</span></scroll-items>
 				</li>
 			</ul>
 		</div>

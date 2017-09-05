@@ -11,16 +11,22 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	&.right {
-		// right: 0;
-	}
 
 	.col-1-2 {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
 		flex: 1;
 		max-width: 50%;
-		@media (max-width: 720px) {
+		@include lt(10) {
 			flex: 0 0 100%;
 			max-width: 100%;
+		}
+		&.right {
+			@include gt(10) {
+				align-items: flex-end;
+			}
+
 		}
 	}
 }

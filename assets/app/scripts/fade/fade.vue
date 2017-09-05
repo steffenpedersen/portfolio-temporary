@@ -7,20 +7,18 @@ export default Vue.directive('fade', {
 		const timelineParameters = anime.timeline({
 		});
 
-		timelineParameters
-			.add({
-				targets: el,
-				scale: [
-					{ value: 0 },
-					{ value: 1 },
-				],
-				opacity: [
-					{ value: 0 },
-					{ value: 1 },
-				],
-				duration: binding.value.duration,
-				elasticity: 200,
-			});
+		setTimeout(() => {
+			timelineParameters
+				.add({
+					targets: el,
+					opacity: [
+						{ value: 0 },
+						{ value: 1 },
+					],
+					duration: binding.value.duration,
+					elasticity: 200,
+				});
+		}, 1500);
 	},
 });
 

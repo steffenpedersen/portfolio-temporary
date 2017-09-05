@@ -101,7 +101,7 @@ table {
   padding: 0; }
 
 body {
-  color: #262626;
+  color: #111111;
   background-color: #FFFFFF;
   font-family: 'poppinsbold', sans-serif;
   line-height: 1.6;
@@ -124,7 +124,7 @@ h2 {
   font-family: 'poppinsbold', sans-serif;
   font-size: 72px;
   font-weight: 700;
-  color: #262626;
+  color: #111111;
   letter-spacing: 1px;
   line-height: 1.6;
   opacity: 0; }
@@ -140,13 +140,13 @@ p {
   font-family: 'poppinsregular', sans-serif;
   font-size: 13px;
   font-weight: 400;
-  color: #262626;
+  color: #111111;
   opacity: .8;
   letter-spacing: 1px;
   opacity: 0; }
 
 a {
-  color: #262626;
+  color: #111111;
   text-decoration: none;
   position: relative;
   cursor: pointer; }
@@ -167,11 +167,11 @@ h2 a:hover::after {
   width: 100%; }
 
 ::selection {
-  color: #262626;
+  color: #111111;
   background: #FACA33; }
 
 ::-moz-selection {
-  color: #262626;
+  color: #111111;
   background: #FACA33; }
 
 sup {
@@ -206,14 +206,24 @@ ul ul {
       flex-wrap: wrap;
   width: 100%; }
   .grid .col-1-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
     -ms-flex: 1;
         flex: 1;
     max-width: 50%; }
-    @media (max-width: 720px) {
+    @media all and (max-width: 768px) {
       .grid .col-1-2 {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
         max-width: 100%; } }
+    @media all and (min-width: 769px) {
+      .grid .col-1-2.right {
+        -ms-flex-align: end;
+            align-items: flex-end; } }
 
 @keyframes pulse {
   from {
@@ -224,6 +234,35 @@ ul ul {
   to {
     transform: scale(1);
     opacity: 0; } }
+
+.load-wrap {
+  pointer-events: none;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 500; }
+  .load-wrap .load {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #111111; }
+    .load-wrap .load svg {
+      opacity: 0; }
+    .load-wrap .load svg path {
+      opacity: 0; }
 
 main {
   margin: 100px 10vw; }
@@ -244,6 +283,8 @@ main {
       main #hello {
         -ms-flex-align: start;
             align-items: flex-start; } }
+    main #hello h2 {
+      opacity: 0; }
     main #hello p {
       font-family: 'crimson-textbold-italic';
       opacity: 1;
@@ -263,7 +304,7 @@ main {
   opacity: 1; }
 
 #project-content #overview {
-  background-color: #262626;
+  background-color: #111111;
   padding: 8vw;
   margin: 100px 0; }
   #project-content #overview h3 {
@@ -281,10 +322,10 @@ main {
     margin-bottom: 20px;
     padding: 20px 95px;
     max-width: 220px;
-    color: #262626;
+    color: #111111;
     cursor: pointer; }
   #project-content #overview input[type="radio"]:checked + label span {
-    background-color: #D7D0C8; }
+    opacity: .3; }
   #project-content #overview input[type="radio"] + label span,
   #project-content #overview input[type="radio"]:checked + label span {
     transition: all 300ms;
@@ -312,7 +353,7 @@ main {
     #project-content #projects .project .subject h5 {
       font-family: 'crimson-textbold-italic';
       font-size: 13px;
-      color: #262626;
+      color: #111111;
       margin-bottom: 2px; }
     #project-content #projects .project .subject p {
       font-size: 11px; }
@@ -373,17 +414,16 @@ main {
     -ms-flex-pack: start;
         justify-content: flex-start; }
     .left-bar .top .image {
-      height: 70px;
-      min-height: 70px;
-      width: 70px;
-      min-width: 70px;
+      height: 8vw;
+      max-height: 70px;
+      width: 8vw;
+      max-width: 70px;
       margin-top: 30px;
       border-radius: 50%;
       background-image: url(/app/static/me.jpg);
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0; }
+      background-repeat: no-repeat; }
   .left-bar .bottom {
     height: 50vh;
     display: -ms-flexbox;
@@ -452,7 +492,7 @@ main {
       .right-bar ul li a {
         font-family: fontawesome;
         font-size: 16px;
-        color: #262626; }
+        color: #111111; }
         .right-bar ul li a.linkedin::before {
           content: '\F0E1'; }
         .right-bar ul li a.instagram::before {

@@ -2,7 +2,6 @@ const state = {
 	projects: [{
 		type: 'web',
 		id: 'web-1',
-		href: '#web-1',
 		img1: '/app/static/vuc-roskilde.png',
 		img2: '/app/static/vucvest-sektion.png',
 		name: 'VUC Fællesskaberne',
@@ -16,7 +15,6 @@ const state = {
 	{
 		type: 'web',
 		id: 'web-2',
-		href: '#web-2',
 		img1: '/app/static/sfi.png',
 		img2: '/app/static/sfi-sektion.png',
 		name: 'SFI- Det Nationale Forskningscenter for Velfærd',
@@ -30,7 +28,6 @@ const state = {
 	{
 		type: 'web',
 		id: 'web-3',
-		href: '#web-3',
 		img1: '/app/static/broed-start2.png',
 		img2: '/app/static/broed-intro.png',
 		name: 'Brød & Co.',
@@ -44,7 +41,6 @@ const state = {
 	{
 		type: 'web',
 		id: 'web-4',
-		href: '#web-4',
 		img1: '/app/static/flowmaster.png',
 		img2: '/app/static/dlrt-blog.png',
 		name: 'Flowmaster, WP',
@@ -58,7 +54,6 @@ const state = {
 	{
 		type: 'design',
 		id: 'design-1',
-		href: '#design-1',
 		img1: '/app/static/hbp-posters.png',
 		img2: '/app/static/happy_sportswearint.jpg',
 		name: 'Etsy',

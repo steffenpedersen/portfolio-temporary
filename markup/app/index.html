@@ -36,12 +36,30 @@
 
 	<div app>
 
+		<section class="load-wrap">
+	<div v-load class="load">
+		<div>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="105px" height="60.5px" viewBox="0 0 105 60.5" enable-background="new 0 0 105 60.5" xml:space="preserve">
+<line fill="none" stroke="#FFFFFF" stroke-width="15" stroke-miterlimit="10" x1="7.5" y1="0" x2="7.5" y2="60"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="15" stroke-miterlimit="10" x1="7.5" y1="30" x2="42.5" y2="30"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="15" stroke-miterlimit="10" x1="42.5" y1="0" x2="42.5" y2="60"/>
+<line fill="none" stroke="#FFFFFF" stroke-width="15" stroke-miterlimit="10" x1="67.5" y1="0" x2="67.5" y2="60"/>
+<g>
+	<path fill="#FACA33" d="M94.5,60.5C88.71,60.5,84,55.79,84,50s4.71-10.5,10.5-10.5S105,44.21,105,50S100.29,60.5,94.5,60.5z"/>
+</g>
+</svg>
+
+		</div>
+	</div>
+</section>
+
+
 		<section class="left-bar">
 	<div class="top">
-		<div v-fade="{duration: 1000}" class="image"></div>
+		<div class="image"></div>
 	</div>
 	<div class="bottom">
-		<div v-fade-down="{duration: 1000}" class="arrow">
+		<div class="arrow">
 			<span></span>
 			scroll
 		</div>
@@ -67,7 +85,7 @@
 		<main>
 
 			<section id="hello">
-	<h1 v-fade="{duration: 1000}" class="hi">Steffen<span v-fade="{duration: 2000}" class="color-yellow">.</span></h1>
+	<h1 v-fade-in="{duration: 1500}" class="hi">Steffen<span v-fade="{duration: 2500}" class="color-yellow">.</span></h1>
 	<p>Dette er mit portfolio.</p>
 </section>
 

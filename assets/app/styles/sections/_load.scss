@@ -1,0 +1,29 @@
+.load-wrap {
+	pointer-events: none;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 500;
+
+	.load {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+		background-color: $color-black;
+
+		svg {
+			opacity: 0;
+		}
+
+		svg path {
+			opacity: 0;
+		}
+	}
+}
